@@ -36,12 +36,8 @@ export default function users(state = {}, action) {
         [action.tweet.id]: action.tweet,
         ...replyingTo
       };
-      //when we add a new tweet we need to add it to the array of our tweets slice of the state. which is an oblect (...state) if the new tweet is a reply to the other tweet then we are going to grab it and add it onto the replies array and spread it onto the state tweets array
-      return {
-        ...state,
-        [action.tweet.id]: action.tweet,
-        ...replyingTo
-      };
+    //when we add a new tweet we need to add it to the array of our tweets slice of the state. which is an oblect (...state) if the new tweet is a reply to the other tweet then we are going to grab it and add it onto the replies array and spread it onto the state tweets array
+
     default:
       return state;
   }

@@ -50,7 +50,6 @@ class NewTweet extends Component {
           <button className="btn" type="submit" disabled={text === ""}>
             Submit
           </button>
-          //redirect home
         </form>
       </div>
     );
