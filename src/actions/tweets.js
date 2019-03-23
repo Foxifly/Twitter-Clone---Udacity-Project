@@ -31,15 +31,17 @@ export function handleAddTweet(text, replyingTo) {
     const { authedUser } = getState();
 
     dispatch(showLoading());
+
     return saveTweet({
       text,
       author: authedUser,
       replyingTo
     })
-      .then(tweet => dispatch(addtweet(tweet)))
+      .then(tweet => dispatch(addTweet(tweet)))
       .then(() => dispatch(hideLoading()));
   };
 }
+
 export function handleToggleTweet(info) {
   return dispatch => {
     dispatch(toggleTweet(info));
