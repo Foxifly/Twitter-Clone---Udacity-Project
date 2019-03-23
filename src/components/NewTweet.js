@@ -13,6 +13,16 @@ class NewTweet extends Component {
   };
   handleSubmit = e => {
     e.preventDefault();
+
+    const { text } = this.state;
+
+    // todo: Add Tweet to Store
+
+    console.log("New Tweet: ", text);
+
+    this.setState(() => ({
+      text: ""
+    }));
   };
   render() {
     const { text } = this.state;
